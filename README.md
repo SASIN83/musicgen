@@ -43,7 +43,13 @@ You can train your very first model by typing the following command into Termina
 Training will take a while depending on the length and number of songs used
 If you get an error of the following form:
 Error allocating X bytes of device memory (out of memory). Driver report Y bytes free and Z bytes total
-you must adjust the parameters in train.py - specifically, decrease the batch_size to something smaller. If you still have out of memory errors, you can also decrease the hidden_dims parameter in train.py and generate.py, although this will have a significant impact on the quality of the generated music.
+you must adjust the parameters in train.py - specifically, decrease the batch_size to something smaller. If you still have out of memory errors, you can also decrease the hidden_dims parameter in train.py and generate.py, although this will have a significant impact on the quality of the generated music. Or you can allocate your swap memory from dynamic to manual(in windows follow steps given below)
+
+a. Go to Advanced System Settings
+b. Then go to Performance Setting
+c. Select Advanced
+d. Change Virtual Memory and uncheck Automatically manage paging
+e. then add custom size as per requirement in MB
 
 # Step 3. Generation
 After you've finished training your model, it's time to generate some music!
